@@ -1,4 +1,4 @@
 .idea/
-datasets/
+/datasets/
 __pycache__/
 assets/
