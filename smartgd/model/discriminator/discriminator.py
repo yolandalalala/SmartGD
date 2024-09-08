@@ -54,7 +54,7 @@ class Discriminator(nn.Module):
     )
     eps: float = EPS
 
-    def __post_init__(self):
+    def __attrs_post_init__(self):
         super().__init__()
 
         self.block: DiscriminatorBlock = DiscriminatorBlock(

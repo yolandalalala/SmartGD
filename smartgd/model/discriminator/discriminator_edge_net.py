@@ -33,7 +33,7 @@ class DiscriminatorEdgeNet(nn.Module):
     edge_feat_expansion: EdgeFeatureExpansion.Expansions = EdgeFeatureExpansion.Expansions()
     eps: float = EPS
 
-    def __post_init__(self):
+    def __attrs_post_init__(self):
         super().__init__()
 
         self.edge_feature_provider: EdgeFeatureExpansion = EdgeFeatureExpansion(

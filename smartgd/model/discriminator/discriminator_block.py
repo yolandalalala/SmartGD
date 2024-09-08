@@ -46,7 +46,7 @@ class DiscriminatorBlock(nn.Module):
     edge_feat_expansion: EdgeFeatureExpansion.Expansions = EdgeFeatureExpansion.Expansions()
     eps: float = EPS
 
-    def __post_init__(self):
+    def __attrs_post_init__(self):
         super().__init__()
 
         self.shared_edge_net: DiscriminatorEdgeNet = DiscriminatorEdgeNet(
@@ -74,6 +74,7 @@ class DiscriminatorBlock(nn.Module):
         out_dims = [self.params.hidden_width] * self.params.hidden_depth + [self.params.out_dim]
         for layer_index, (in_dim, out_dim) in enumerate(zip(in_dims, out_dims)):
             self.layer_list.append(NNConvLayer(
+                layer_index=-1,
                 params=NNConvBasicLayer.Params(
                     in_dim=in_dim,
                     out_dim=out_dim,
@@ -110,10 +111,12 @@ class DiscriminatorBlock(nn.Module):
         )
         outputs = torch.ones_like(node_feat)
         for layer in self.layer_list:
-            outputs = layer(
+            outputs, _, _ = layer(
                 node_feat=outputs,
                 edge_feat=edge_feat,
                 edge_index=edge_index,
-                batch_index=batch_index
+                batch_index=batch_index,
+                num_sampled_nodes_per_hop=None,
+                num_sampled_edges_per_hop=None,
             )
         return outputs

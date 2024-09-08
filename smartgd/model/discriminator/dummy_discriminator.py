@@ -7,7 +7,7 @@ from torch import nn
 
 @define(kw_only=True, eq=False, repr=False, slots=False)
 class DummyDiscriminator(nn.Module):
-    def __post_init__(self):
+    def __attrs_post_init__(self):
         super().__init__()
         self.dummy = nn.Parameter(torch.zeros(1, requires_grad=True))
         self.stress = Stress()
