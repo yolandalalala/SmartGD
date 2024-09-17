@@ -171,11 +171,7 @@ class Generator(nn.Module):
                 num_sampled_edges_per_hop=num_sampled_edges_per_hop
             )
 
-        # TODO: Use input as initial layout
-        #   outputs += normalized_inputs
-        #   outputs = parametric_scaling(outputs)
-
-        return outputs  # , edge_index, edge_attr
+        return outputs
 
     @property
     def total_layers(self):
