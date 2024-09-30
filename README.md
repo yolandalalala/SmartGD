@@ -7,15 +7,14 @@ This repo contains a simple demonstration for the IEEE TVCG23 paper entitled "[S
 * and a demo notebook for model traning and evaluation.
 
 ## Environment
-This code has been tested on python3.11 + cuda12.1 + pytorch2.4 + pyg2.4. 
+This code has been tested on `python3.11` + `cuda12.1` + `pytorch2.4` + `pyg2.4`. 
 
 ## Configuration
 The default hyper-parameters of the model have been configured to reproduce the best performance reported in the [SmartGD paper](https://ieeexplore.ieee.org/document/10224347). 
 
-## Training
-With Nvidia A100, each training epoch takes 5 minutes on average. It takes up to 1000 epochs to completly converge.
+## Training & Evaluation
+* This repo provides a demo notebook `smartgd_demo.ipynb` for model training and evaluation. With Nvidia A100, each training epoch takes 5 minutes on average. It takes up to 1000 epochs to completly converge.
 
-## Evaluation
 * This repo includes a model checkpoint `generator_493.pt`, which reproduces the result for Stress Majorization-only objective function reported in the paper.
 
 * For evaluation on custom data, the easiest way is to subclass `RomeDataset` and override `raw_file_names` and `process_raw` methods.
