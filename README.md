@@ -1,5 +1,5 @@
 # SmartGD: A GAN-Based Graph Drawing Framework for Diverse Aesthetic Goals
-This repo contains a simple demonstration for the IEEE TVCG23 paper entitled "[SmartGD: A GAN-Based Graph Drawing Framework for Diverse Aesthetic Goals](https://ieeexplore.ieee.org/document/10224347)". It includes:
+This repo contains a simple demonstration for the IEEE TVCG‘2024 paper entitled "[SmartGD: A GAN-Based Graph Drawing Framework for Diverse Aesthetic Goals](https://ieeexplore.ieee.org/document/10224347)". It includes:
 
 * a dataloader for Rome Graphs dataset,
 * a basic implementation of SmartGD model,
