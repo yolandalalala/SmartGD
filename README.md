@@ -15,7 +15,7 @@ The default hyper-parameters of the model have been configured to reproduce the 
 ## Training & Evaluation
 * This repo provides a demo notebook `smartgd_demo.ipynb` for model training and evaluation. With Nvidia A100, each training epoch takes 5 minutes on average. It takes up to 1000 epochs to completly converge.
 
-* This repo includes a model checkpoint `generator_493.pt`, which reproduces the result for Stress Majorization-only objective function reported in the paper.
+* This repo includes a model checkpoint `generator_stress_only.pt`, which reproduces the result for Stress Majorization-only objective function reported in the paper.
 
 * For evaluation on custom data, the easiest way is to subclass `RomeDataset` and override `raw_file_names` and `process_raw` methods.
     > **Caveat**: Even though the behavior of `process` do not need to be overriden, it is required to have a dummy `def process(self): super().process()` defined in the subclasses to make it work properly. For details, please refer to `pyg.data.InMemoryDataset` [documentation](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#torch_geometric.data.InMemoryDataset).
