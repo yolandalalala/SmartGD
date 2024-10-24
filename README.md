@@ -22,7 +22,7 @@ The default hyper-parameters of the model have been configured to reproduce the 
 * For evaluation on custom data, the easiest way is to subclass `RomeDataset` and override `raw_file_names` and `process_raw` methods.
     > **Caveat**: Even though the behavior of `process` do not need to be overriden, it is required to have a dummy `def process(self): super().process()` defined in the subclasses to make it work properly. For details, please refer to `pyg.data.InMemoryDataset` [documentation](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#torch_geometric.data.InMemoryDataset).
 
-* For model benckmarking on a comprehensive set of evaluation metrics and baselines, please refer to [GraphDrawingBenchmark](https://github.com/yolandalalala/GraphDrawingBenchmark).
+* For easy benckmarking with SmartGD and a comprehensive set of other baseline methods, please check [GraphDrawingBenchmark](https://github.com/yolandalalala/GraphDrawingBenchmark). This benchmark includes all common graph drawing evaluation metrics and evaluates on the same train/test split for Rome dataset as used in the SmartGD paper.
 
 ## Citation
 If you used our code or find our work useful in your research, please consider citing:
