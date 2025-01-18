@@ -6,6 +6,11 @@ This repo contains a simple demonstration for the IEEE TVCG‘2024 paper entitle
 * a generator checkpoint trained for Stress majorization,
 * and a demo notebook for model traning and evaluation.
 
+## 🔗 Prior Work - DeepGD
+SmartGD is inspired by our prior work, DeepGD, which is a novel graph drawing method aims to optimize arbitrary differentiable aesthetic metrics. Please check this [repository](https://github.com/yolandalalala/DeepGD) for more details.
+
+Paper: https://ieeexplore.ieee.org/document/9476996
+
 ## Environment
 This code has been tested on `python3.11` + `cuda12.1` + `pytorch2.4` + `pyg2.4`. 
 
